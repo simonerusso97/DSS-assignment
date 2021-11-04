@@ -1,0 +1,12 @@
+Per risolvere l'SCSE problem (3.18)-(3.22) si è utilizzato il solver cplex e l'IDE AMPL.
+Inizialmente si è creato il file modello.mod nel quale dichiarato le variabili, i parametri (compresa la formula del calcolo
+di ogni costo associato ad ogni FATTORIA/SILOS "C" e la formula dei costi fissi in giornalieri per ogni SILOS "f").
+
+Dopo aver dichiarato la Objective Function ed i rispettivi Constraints, ci siamo occupati di creare un file denominato
+dati.dat, dove si sono scritti i valori dei parametri di una particolare istanza del problema.
+
+Ed infine si è scritto il file avvio.run che tramite la scrittura della seguente linea sul terminare:
+
+include avvio.run
+
+Permette di visualizzare il valore della Objective Function, le variabili decisionali ed anche il modello espanso di questo problema.

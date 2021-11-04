@@ -1,0 +1,8 @@
+reset;
+model modello.mod;
+data dati.dat;
+option solver cplex;
+solve;
+expand obj_funct, constraint1, constraint2;
+display x;
+display y;

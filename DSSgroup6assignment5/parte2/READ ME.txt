@@ -1,0 +1,33 @@
+Nella prima parte del codice ci siamo occupati di definire le liste che ci sarebbero servite 
+per creare un percorso, come richiesto.
+
+In un primo momento abbiamo realizzato la lettura del file CSV in modo tale da prenderci i dati 
+che abbiamo precedentemente generato.
+
+Subito dopo abbiamo definito la c_matrix, ovvero la matrice con tutte le distanze da 
+tutti i nodi generati e, dopo averla definita, ci siamo occupati di avvalorarla. 
+Il codice è tra due print.
+
+Dopo aver avvalorato tale matrice, ci siamo occupati di realizzare l'algoritmo di tipo greedy 
+che esegue quanto richiesto, ovvero che si passi da ogni punto rispettando il vincolo della 
+capacità.
+
+Il punto di partenza (base) è il primo nodo che si viene a generare nel file CSV e questo viene 
+definito come "last_customer".
+Abbiamo poi definito una lista "temp" poiché ci serviva creare una copia della lista perché,
+ogni volta che ci spostavamo in un nuovo nodo, occorreva rimuoverlo da questa lista temporanea 
+in quanto non avremmo dovuto più visitarlo. 
+Tuttavia la lista completa "customer_list" ci serviva nel momento in cui dovevamo trovare un percorso 
+che rispettasse il vincolo della capacità. Questo è mostrato nel ciclo for che abbiamo realizzato.
+
+Partendo dal punto base, che rimuoviamo dalla lista temp, troviamo tutti i percorsi per gli altri 
+nodi e le relative distanze che salviamo nel dictionary min_dist_dict (con i relativi id), che andremo 
+poi ad ordinare in una lista di distanze crescenti.
+Nel for, invece, troviamo la minima distanza e controlliamo se il nodo sia effettivamente raggiungibile rispettando 
+il vincolo della capacità.
+Se esso è raggiungibile allora ci spostiamo nel nuovo nodo, altrimenti dobbiamo chiudere il circuito 
+per rifornirci (ricaricando la capacità) e per farlo occorre tornare nuovamente al punto base. 
+Non appena tutti i nodi sono stati visitati, stampiamo la lista finale con tutte le tratte eseguite.
+
+Il codice presenta molti print poiché dovevamo tenere traccia di molte variabili e ciò rende più facile
+la comprensione del codice in fase di esecuzione.

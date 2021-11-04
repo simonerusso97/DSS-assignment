@@ -1,0 +1,41 @@
+Report 
+Il nostro obiettivo è andare a minimizzare la distanza tra l'hub ed i nodi che lo circondano, cercando, quindi, la posizione ottimale per l'hub.
+
+Occorre confrontare due tipologie di risoluzione nate da due strategie diverse:
+
+Nella prima risoluzione, abbiamo utilizzato il datasheet di excel implementando il solver tramite il quale abbiamo trovato la soluzione ottimale.
+Il file waterwell ha al suo interno la tabella con i dati che abbiamo utilizzato per la risoluzione. 
+Dopo aver implementato le funzioni che descrivono il modello, abbiamo avviato il solver che come soluzioni ci ha fornito trovato il minimo
+della funzione e quindi la coppia di punti X,Y migliore in cui posizionare l'hub.
+
+Qui di seguito riportiamo i risultati ottenuti
+
+Punto X,Y -> 15,64438924 10,3362025
+
+Totale flow/dist/cost 72,01643759(€/min)
+
+
+Nella secondo risoluzione, abbiamo implementato il codice python utilizzando la Weiszfield heuristic. 
+Lanciando la funzione, passando come parametro DatiPozzi.csv, otteniamo il seguente risultato:
+
+Iterazione 0
+x_0=18.781622363708713, y_0=12.617005968961399
+z_0=74.3579566310433
+Iterazione 1
+x_1=17.189262226611856, y_1=10.874817962829967
+z_1=72.42367568249347
+Iterazione 2
+x_2=16.521701337846604, y_2=10.38694980283168
+z_2=72.1245143860988
+Iterazione 3
+x_3=16.184533678718115, y_3=10.297373931007908
+z_3=72.05819712566894
+L'hub si posiziona in x=16.184533678718115, y=10.297373931007908 con z=72.05819712566894
+
+Confrontando i risultati ottenuti, notiamo che i risultati finali sono diversi. La motivazione è da ricercarsi nel fatto che abbiamo, nella risoluzione di 
+python, utilizzato una approssimazione. L'utilizzo di essa ci ha, quindi, fatto giungere ad una buona approssimazione del risultato ottimale.
+
+
+
+
+

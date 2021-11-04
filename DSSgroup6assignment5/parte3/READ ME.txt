@@ -1,0 +1,58 @@
+In questo ultimo Assignment si è deciso di dividerlo in due parti.
+Nel primo elaborato abbiamo trattato il problema senza il 
+vincolo della capacità (local_search) mentre il secondo
+rispetta il vincolo (complete_local_search).
+
+Si inizierà spiegando il primo poiché l'implentazione della
+capacità è un'aggiunta del problema che verrà trattato.
+
+Prima di tutto abbiamo scritto il codice per leggere il file csv,
+rispetto all'assignment precedente abbiamo aggiunto una lettura della soluzione
+generata dall'algoritmo greedy, questo è visibile negli ultimo "elif"
+e nell'"else" finale, l'elif legge il costo (z) dell'intero percorso, mentre l'else finale
+costriusce una lista di tutti i percorsi (tour) della soluzione generata.
+
+Come nell'algoritmo precedente l'utilizzo della matrice di tutte le distanze da tutti i nodi
+si è resa necessaria per i successivi calcoli che verranno spiegati.
+
+{---------Spiegazione Logica dell'algoritmo--------}
+
+Abbiamo preso la soluzione generata dall'algoritmo greedy, per applicare un meccanismo di
+local search, abbiamo deciso di seguire questa idea.
+Abbiamo considerato tutte le tratte che ritornano al nodo base come una lista a sé stante.
+Abbiamo preso il primo nodo di questa lista, escluso il nodo di partenza,
+e ci siamo calcolati il suo neighbor più vicino non presente nella tratta in considerazione. 
+Trovato questo neighbor abbiamo costruito due possibili soluzioni, inserendo il neighbor 
+considerato nella posizione precedente a tale nodo e poi nella posizione successiva 
+e ne abbiamo valutato la variazione nella funzione obiettivo.
+La soluzione con la variazione migliore tra le due viene scelta e confrontata con la funzione
+obiettivo della miglior soluzione trovata fin'ora. Qual'ora dovesse essere migliorativa, essa
+viene sostituita.
+Questo processo viene applicato in maniera iterativa a tutti i nodi di una tratta e
+successivamente a tutte le tratte, trovando, se possibile, una soluzione migliorativa.
+Per giungere ad una soluzione ottima bisogna iterare l'intero algoritmo fino a quando
+la funzione obiettivo non presenta più miglioramenti, ovvero quando l'algoritmo ha raggiunto
+la convergenza.
+
+Mentre nel caso in cui si vuole tenere in considerazione anche il vincolo della capacità, 
+durante il calcolo del neighbor bisogna tenere traccia anche della capacità residua della tratta. 
+Se il neighbor richiede una capacità minore di quella residua verrà agganciato nella tratta, 
+altrimenti si andrà alla ricerca di un neighbor più vicino che rispetta il vincolo di capacità.
+La restante parte per il calcolo della soluzione migliorativa è esattamente uguale 
+a quello precedentemente spiegato.
+
+{-----------------------------------------------------}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

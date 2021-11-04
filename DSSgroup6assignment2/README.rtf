@@ -1,0 +1,32 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Dopo aver implemantato il task contenente l'initial state e il goal state richiesto dall'esercizio, abbiamo lanciato pyperplan.py da terminale specificando l'algoritmo da usare, ovvero l'A*, passando come paramentro il nostro task.\
+\
+La soluzione ottenuta \'e8:\
+\
+(unstack a e)	step 1\
+(put-down a)	step 2\
+(unstack c b)	step 3\
+(stack c e)		step 4\
+(unstack b d)	step 5\
+(put-down b)	step 6\
+(pick-up d)		step 7\
+(stack d c) 	step 8\
+(pick-up a)		step 9\
+(stack a b)		step 10\
+\
+Questo output rappresenta il percorso migliore da seguire per raggiungere il goal.\
+Nel primo step si solleva il blocco \'93a\'94  con unstack e in questo momento il braccio meccanico \'e8 occupato. Sopra al blocco \'93a\'94 non si pu\'f2 poggiare nulla, mentre il blocco \'93e\'93 adesso non ha niente sopra di esso. \
+Nel secondo step lo si poggia sul tavolo liberando cos\'ec il braccio meccanico, permettendo di poggiare altri blocchi sul blocco \'93a\'94.\
+Nel terzo step si solleva il blocca \'93c\'94 e si procede come nel primo step.\
+Nel quarto step si poggia il blocco \'93c\'94 sul blocco \'93e\'94 liberando il braccio meccanico e occupando quindi la parte superiore del blocco \'93e\'94.\
+Nel quinto step si solleva il blocco \'93b\'94 e nel sesto step lo si poggia sul tavolo seguendo i procedimenti degli step 1 e 2.\
+Nel settimo step si solleva il blocco \'93d\'94 che si trova sul tavolo, il braccio meccanico ora \'e8 occupato e sopra al blocco \'93d\'94 non si pu\'f2 mettere nulla.\
+Nell\'92ottavo step lo si poggia su \'93c\'94 procedo come nello step 4.\
+Nel nono step si solleva il blocco \'93a\'94 e nel decimo lo si poggia sul blocco \'94b\'94 procedendo come negli step 7 e 8.\
+}
