@@ -1,0 +1,16 @@
+If you get a complaint about AMPL or a solver not being signed,
+please proceed as follows:
+
+With Finder, navigate into your AMPL directory.
+
+Control-click "ampl.command" and select Open in the menu that pops up.
+
+If a box with a warning message ("macOS cannot verify the developer")
+appears, click Open in that box.  An ampl.command Terminal window will
+then appear.  After a few seconds, "ampl:" will appear in the last
+line of that window.  You can now terminate that window (by clicking
+the red button at the upper left).
+
+After this exercise, which creates or updates file .DS_Store, you
+should be able to invoke the AMPL and solver binaries in this
+directory without complaints about something not being signed.
